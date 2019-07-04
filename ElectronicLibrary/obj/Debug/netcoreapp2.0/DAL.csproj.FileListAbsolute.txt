@@ -1,0 +1,6 @@
+c:\users\anastasiia_kavetska\source\repos\ElectronicLibrary\ElectronicLibrary\bin\Debug\netcoreapp2.0\DAL.deps.json
+c:\users\anastasiia_kavetska\source\repos\ElectronicLibrary\ElectronicLibrary\bin\Debug\netcoreapp2.0\DAL.dll
+c:\users\anastasiia_kavetska\source\repos\ElectronicLibrary\ElectronicLibrary\obj\Debug\netcoreapp2.0\DAL.csprojAssemblyReference.cache
+c:\users\anastasiia_kavetska\source\repos\ElectronicLibrary\ElectronicLibrary\obj\Debug\netcoreapp2.0\DAL.csproj.CoreCompileInputs.cache
+c:\users\anastasiia_kavetska\source\repos\ElectronicLibrary\ElectronicLibrary\obj\Debug\netcoreapp2.0\DAL.AssemblyInfoInputs.cache
+c:\users\anastasiia_kavetska\source\repos\ElectronicLibrary\ElectronicLibrary\obj\Debug\netcoreapp2.0\DAL.AssemblyInfo.cs

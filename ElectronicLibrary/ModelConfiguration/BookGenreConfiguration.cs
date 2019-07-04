@@ -8,6 +8,9 @@ namespace ElectronicLibrary.DataAccessLayer.ModelConfiguration
     {
         public void Configure(EntityTypeBuilder<BookGenre> builder)
         {
+            builder.Property<bool>("IsDeleted");
+            builder.HasQueryFilter(model => EF.Property<bool>(model, "IsDeleted") == false);
+
             builder.HasKey(t => new { t.BookId, t.GenreId });
 
             builder.HasOne(bg => bg.Book)

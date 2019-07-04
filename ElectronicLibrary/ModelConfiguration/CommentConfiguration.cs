@@ -8,6 +8,9 @@ namespace ElectronicLibrary.DataAccessLayer.ModelConfiguration
     {
         public void Configure(EntityTypeBuilder<Comment> builder)
         {
+            builder.Property<bool>("IsDeleted");
+            builder.HasQueryFilter(model => EF.Property<bool>(model, "IsDeleted") == false);
+
             builder.HasOne(comment => comment.ParentComment)
                 .WithMany()
                 .HasForeignKey(comment => comment.ParentCommentId);

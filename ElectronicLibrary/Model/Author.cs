@@ -5,6 +5,7 @@ namespace ElectronicLibrary.DataAccessLayer.Model
     public class Author
     {
         public int Id { get; set; }
+        public bool IsDeleted { get; set; }
 
         public string Name { get; set; }//HasComputedColumnSql
         public string FirstName { get; set; }

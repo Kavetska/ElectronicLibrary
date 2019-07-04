@@ -8,6 +8,9 @@ namespace ElectronicLibrary.DataAccessLayer.ModelConfiguration
     {
         public void Configure(EntityTypeBuilder<Vote> builder)
         {
+            builder.Property<bool>("IsDeleted");
+            builder.HasQueryFilter(model => EF.Property<bool>(model, "IsDeleted") == false);
+
             builder.HasOne(vote => vote.User)
                 .WithMany(user => user.Votes)
                 .HasForeignKey(vote => vote.UserId);

@@ -8,7 +8,8 @@ namespace ElectronicLibrary.DataAccessLayer.ModelConfiguration
     {
         public void Configure(EntityTypeBuilder<Genre> builder)
         {
-
+            builder.Property<bool>("IsDeleted");
+            builder.HasQueryFilter(model => EF.Property<bool>(model, "IsDeleted") == false);
         }
     }
 }

@@ -3,6 +3,7 @@
     public class Vote
     {
         public int Id { get; set; }
+        public bool IsDeleted { get; set; }
         public int Rating { get; set; }
 
         public int UserId { get; set; }

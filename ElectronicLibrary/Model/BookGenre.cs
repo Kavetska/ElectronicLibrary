@@ -2,6 +2,7 @@
 {
     public class BookGenre
     {
+        public bool IsDeleted { get; set; }
         public int BookId { get; set; }
         public Book Book { get; set; }
 

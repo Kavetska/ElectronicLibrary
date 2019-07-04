@@ -3,6 +3,7 @@
     public class Comment
     {
         public int Id { get; set; }
+        public bool IsDeleted { get; set; }
         public string Name { get; set; }
         public string Body { get; set; }
 

@@ -1,4 +1,6 @@
-﻿using DAL.ModelConfiguration;
+﻿using System.Threading;
+using System.Threading.Tasks;
+using DAL.ModelConfiguration;
 using ElectronicLibrary.DataAccessLayer.Model;
 using ElectronicLibrary.DataAccessLayer.ModelConfiguration;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +21,7 @@ namespace ElectronicLibrary.DataAccessLayer
         public LibraryContext(DbContextOptions<LibraryContext> options)
             : base(options)
         {
-            Database.Migrate();
+           // Database.Migrate();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -32,6 +34,35 @@ namespace ElectronicLibrary.DataAccessLayer
             modelBuilder.ApplyConfiguration(new GenreConfiguration());
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new VoteConfiguration());
+        }
+
+        public override int SaveChanges()
+        {
+            UpdateSoftDeleteStatuses();
+            return base.SaveChanges();
+        }
+
+        public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            UpdateSoftDeleteStatuses();
+            return base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
+        }
+
+        private void UpdateSoftDeleteStatuses()
+        {
+            foreach (var entry in ChangeTracker.Entries())
+            {
+                switch (entry.State)
+                {
+                    case EntityState.Added:
+                        entry.CurrentValues["IsDeleted"] = false;
+                        break;
+                    case EntityState.Deleted:
+                        entry.State = EntityState.Modified;
+                        entry.CurrentValues["IsDeleted"] = true;
+                        break;
+                }
+            }
         }
     }
 }

@@ -5,6 +5,7 @@ namespace ElectronicLibrary.DataAccessLayer.Model
     public class Book
     {
         public int Id { get; set; }
+        public bool IsDeleted { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public int PublishYear { get; set; }

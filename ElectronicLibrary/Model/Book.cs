@@ -1,6 +1,7 @@
-﻿namespace DAL.Model
+﻿using System.Collections.Generic;
+
+namespace ElectronicLibrary.DataAccessLayer.Model
 {
-    using System.Collections.Generic;
     public class Book
     {
         public int Id { get; set; }

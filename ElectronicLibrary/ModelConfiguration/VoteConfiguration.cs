@@ -1,8 +1,9 @@
-﻿namespace DAL.ModelConfiguration
+﻿using ElectronicLibrary.DataAccessLayer.Model;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace ElectronicLibrary.DataAccessLayer.ModelConfiguration
 {
-    using Model;
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.EntityFrameworkCore.Metadata.Builders;
     public class VoteConfiguration : IEntityTypeConfiguration<Vote>
     {
         public void Configure(EntityTypeBuilder<Vote> builder)

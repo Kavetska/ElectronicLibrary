@@ -1,9 +1,9 @@
-﻿using System.Linq.Expressions;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 
-namespace DAL.RepositoryPattern.Interfaces
+namespace ElectronicLibrary.DataAccessLayer.RepositoryPattern.Interfaces
 {
-    using System;
-    using System.Collections.Generic;
     public interface IRepository<TEntity> where TEntity: class
     {
         IEnumerable<TEntity> Get();

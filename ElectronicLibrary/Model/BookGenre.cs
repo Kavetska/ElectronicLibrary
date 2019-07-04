@@ -1,4 +1,4 @@
-﻿namespace DAL.Model
+﻿namespace ElectronicLibrary.DataAccessLayer.Model
 {
     public class BookGenre
     {

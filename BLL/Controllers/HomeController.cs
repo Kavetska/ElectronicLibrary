@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
+using ElectronicLibrary.LogicLayer.Models;
 using Microsoft.AspNetCore.Mvc;
-using BLL.Models;
 
-namespace BLL.Controllers
+namespace ElectronicLibrary.LogicLayer.Controllers
 {
     public class HomeController : Controller
     {

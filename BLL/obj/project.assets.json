@@ -11810,9 +11810,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Anastasiia_Kavetska\\source\\repos\\ElectronicLibrary\\BLL\\BLL.csproj",
-      "projectName": "BLL",
-      "projectPath": "C:\\Users\\Anastasiia_Kavetska\\source\\repos\\ElectronicLibrary\\BLL\\BLL.csproj",
+      "projectUniqueName": "C:\\Users\\Anastasiia_Kavetska\\source\\repos\\ElectronicLibrary\\BLL\\ElectronicLibrary.LogicLayer.csproj",
+      "projectName": "ElectronicLibrary.LogicLayer",
+      "projectPath": "C:\\Users\\Anastasiia_Kavetska\\source\\repos\\ElectronicLibrary\\BLL\\ElectronicLibrary.LogicLayer.csproj",
       "packagesPath": "C:\\Users\\Anastasiia_Kavetska\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Anastasiia_Kavetska\\source\\repos\\ElectronicLibrary\\BLL\\obj\\",
       "projectStyle": "PackageReference",

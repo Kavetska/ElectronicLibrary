@@ -1,6 +1,7 @@
-﻿namespace DAL.ModelConfiguration
+﻿using ElectronicLibrary.DataAccessLayer.Model;
+
+namespace DAL.ModelConfiguration
 {
-    using Model;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
     public class AuthorConfiguration : IEntityTypeConfiguration<Author>

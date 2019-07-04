@@ -1,6 +1,4 @@
-using System;
-
-namespace BLL.Models
+namespace ElectronicLibrary.LogicLayer.Models
 {
     public class ErrorViewModel
     {

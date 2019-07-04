@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ElectronicLibrary\DAL.csproj" />
+    <ProjectReference Include="..\ElectronicLibrary\ElectronicLibrary.DataAccessLayer.csproj" />
   </ItemGroup>
 
 </Project>

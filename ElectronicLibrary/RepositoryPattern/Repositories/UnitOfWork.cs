@@ -1,35 +1,36 @@
-﻿namespace DAL.RepositoryPattern.Repositories
+﻿using System;
+using ElectronicLibrary.DataAccessLayer.Model;
+using ElectronicLibrary.DataAccessLayer.RepositoryPattern.Interfaces;
+
+namespace ElectronicLibrary.DataAccessLayer.RepositoryPattern.Repositories
 {
-    using System;
-    using DAL.Model;
-    using DAL.RepositoryPattern.Interfaces;
     public class UnitOfWork : IUnitOfWork, IDisposable
     {
-        private readonly LibraryContext libraryContext;
+        private readonly LibraryContext _libraryContext;
 
-        private IRepository<Book> bookRepository;
-        private IRepository<Author> authorRepository;
-        private IRepository<BookCatalogue> bookCatalogueRepository;
-        private IRepository<Genre> genreRepository;
-        private IRepository<User> userRepository;
-        private IRepository<Vote> voteRepository;
-        private IRepository<Comment> commentRepository;
+        private IRepository<Book> _bookRepository;
+        private IRepository<Author> _authorRepository;
+        private IRepository<BookCatalogue> _bookCatalogueRepository;
+        private IRepository<Genre> _genreRepository;
+        private IRepository<User> _userRepository;
+        private IRepository<Vote> _voteRepository;
+        private IRepository<Comment> _commentRepository;
 
-        public IRepository<Book> BookRepository => bookRepository ?? (bookRepository = new GenericRepository<Book>(libraryContext));
-        public IRepository<Author> AuthorRepository => authorRepository ?? (authorRepository = new GenericRepository<Author>(libraryContext));
-        public IRepository<BookCatalogue> BookCatalogueRepository => bookCatalogueRepository ?? (bookCatalogueRepository = new GenericRepository<BookCatalogue>(libraryContext));
-        public IRepository<Genre> GenreRepository => genreRepository ?? (genreRepository = new GenericRepository<Genre>(libraryContext));
-        public IRepository<User> UserRepository => userRepository ?? (userRepository = new GenericRepository<User>(libraryContext));
-        public IRepository<Vote> VoteRepository => voteRepository ?? (voteRepository = new GenericRepository<Vote>(libraryContext));
-        public IRepository<Comment> CommentRepository => commentRepository ?? (commentRepository = new GenericRepository<Comment>(libraryContext));
+        public IRepository<Book> BookRepository => _bookRepository ?? (_bookRepository = new GenericRepository<Book>(_libraryContext));
+        public IRepository<Author> AuthorRepository => _authorRepository ?? (_authorRepository = new GenericRepository<Author>(_libraryContext));
+        public IRepository<BookCatalogue> BookCatalogueRepository => _bookCatalogueRepository ?? (_bookCatalogueRepository = new GenericRepository<BookCatalogue>(_libraryContext));
+        public IRepository<Genre> GenreRepository => _genreRepository ?? (_genreRepository = new GenericRepository<Genre>(_libraryContext));
+        public IRepository<User> UserRepository => _userRepository ?? (_userRepository = new GenericRepository<User>(_libraryContext));
+        public IRepository<Vote> VoteRepository => _voteRepository ?? (_voteRepository = new GenericRepository<Vote>(_libraryContext));
+        public IRepository<Comment> CommentRepository => _commentRepository ?? (_commentRepository = new GenericRepository<Comment>(_libraryContext));
 
         public UnitOfWork(LibraryContext context)
         {
-            libraryContext = context;
+            _libraryContext = context;
         }
         public void Save()
         {
-            libraryContext.SaveChanges();
+            _libraryContext.SaveChanges();
         }
 
         private bool disposed = false;
@@ -40,7 +41,7 @@
             {
                 if (disposing)
                 {
-                    libraryContext.Dispose();
+                    _libraryContext.Dispose();
                 }
             }
             this.disposed = true;

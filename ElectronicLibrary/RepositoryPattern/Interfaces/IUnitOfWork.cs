@@ -1,6 +1,7 @@
-﻿namespace DAL.RepositoryPattern.Interfaces
+﻿using ElectronicLibrary.DataAccessLayer.Model;
+
+namespace ElectronicLibrary.DataAccessLayer.RepositoryPattern.Interfaces
 {
-    using Model;
     public interface IUnitOfWork
     {
         IRepository<Book> BookRepository { get; }

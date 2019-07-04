@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "ElectronicLibrary\DAL.csproj", "{8761035E-83A4-41C4-9670-C31846740F42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElectronicLibrary.DataAccessLayer", "ElectronicLibrary\ElectronicLibrary.DataAccessLayer.csproj", "{8761035E-83A4-41C4-9670-C31846740F42}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestingApp", "TestingApp\TestingApp.csproj", "{01183FEA-04D1-4594-9F18-94F7C123ED07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{1D4972EE-0913-40DD-A2EA-9DB57AC6F998}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElectronicLibrary.LogicLayer", "BLL\ElectronicLibrary.LogicLayer.csproj", "{1D4972EE-0913-40DD-A2EA-9DB57AC6F998}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

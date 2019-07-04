@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using DAL.Model;
-using DAL.ModelConfiguration;
+﻿using DAL.ModelConfiguration;
+using ElectronicLibrary.DataAccessLayer.Model;
+using ElectronicLibrary.DataAccessLayer.ModelConfiguration;
 using Microsoft.EntityFrameworkCore;
 
-namespace DAL
+namespace ElectronicLibrary.DataAccessLayer
 {
     public class LibraryContext : DbContext
     {

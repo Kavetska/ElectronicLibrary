@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using DAL.RepositoryPattern.Interfaces;
+using ElectronicLibrary.DataAccessLayer.RepositoryPattern.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace DAL.RepositoryPattern.Repositories
+namespace ElectronicLibrary.DataAccessLayer.RepositoryPattern.Repositories
 {
     public class GenericRepository<TEntity> : IRepository<TEntity> where TEntity : class
     {

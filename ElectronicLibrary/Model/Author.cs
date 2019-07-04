@@ -1,7 +1,7 @@
-﻿namespace DAL.Model
-{
-    using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
+namespace ElectronicLibrary.DataAccessLayer.Model
+{
     public class Author
     {
         public int Id { get; set; }

@@ -1,0 +1,11 @@
+C:\Users\Anastasiia_Kavetska\source\repos\ElectronicLibrary\ElectronicLibrary\bin\Debug\netcoreapp2.0\ElectronicLibrary.DataAccessLayer.deps.json
+C:\Users\Anastasiia_Kavetska\source\repos\ElectronicLibrary\ElectronicLibrary\bin\Debug\netcoreapp2.0\ElectronicLibrary.DataAccessLayer.runtimeconfig.json
+C:\Users\Anastasiia_Kavetska\source\repos\ElectronicLibrary\ElectronicLibrary\bin\Debug\netcoreapp2.0\ElectronicLibrary.DataAccessLayer.runtimeconfig.dev.json
+C:\Users\Anastasiia_Kavetska\source\repos\ElectronicLibrary\ElectronicLibrary\bin\Debug\netcoreapp2.0\ElectronicLibrary.DataAccessLayer.dll
+C:\Users\Anastasiia_Kavetska\source\repos\ElectronicLibrary\ElectronicLibrary\bin\Debug\netcoreapp2.0\ElectronicLibrary.DataAccessLayer.pdb
+C:\Users\Anastasiia_Kavetska\source\repos\ElectronicLibrary\ElectronicLibrary\obj\Debug\netcoreapp2.0\ElectronicLibrary.DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Anastasiia_Kavetska\source\repos\ElectronicLibrary\ElectronicLibrary\obj\Debug\netcoreapp2.0\ElectronicLibrary.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Anastasiia_Kavetska\source\repos\ElectronicLibrary\ElectronicLibrary\obj\Debug\netcoreapp2.0\ElectronicLibrary.DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Anastasiia_Kavetska\source\repos\ElectronicLibrary\ElectronicLibrary\obj\Debug\netcoreapp2.0\ElectronicLibrary.DataAccessLayer.AssemblyInfo.cs
+C:\Users\Anastasiia_Kavetska\source\repos\ElectronicLibrary\ElectronicLibrary\obj\Debug\netcoreapp2.0\ElectronicLibrary.DataAccessLayer.dll
+C:\Users\Anastasiia_Kavetska\source\repos\ElectronicLibrary\ElectronicLibrary\obj\Debug\netcoreapp2.0\ElectronicLibrary.DataAccessLayer.pdb

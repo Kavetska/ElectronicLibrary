@@ -10,6 +10,7 @@ namespace ElectronicLibrary.DataAccessLayer.ModelConfiguration
         {
             //builder.Property<bool>("IsDeleted");
             //.HasQueryFilter(model => EF.Property<bool>(model, "IsDeleted") == false);
+            builder.HasKey(obj => obj.Id);
 
             builder.HasOne(comment => comment.ParentComment)
                 .WithMany()

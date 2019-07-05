@@ -9,28 +9,28 @@ namespace ElectronicLibrary.DataAccessLayer.Infrastructure.Repositories
 {
     public class GenericRepository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        private DbContext context;
-        private DbSet<TEntity> dbSet;
+        private DbContext _context;
+        private DbSet<TEntity> _dbSet;
 
         public GenericRepository(DbContext context)
         {
-            this.context = context;
-            this.dbSet = context.Set<TEntity>();
+            _context = context;
+            _dbSet = context.Set<TEntity>();
         }
 
         public void Delete(TEntity entity)
         {
-            dbSet.Remove(entity);
+            _dbSet.Remove(entity);
         }
 
         public IEnumerable<TEntity> Get()
         {
-            return dbSet.AsNoTracking().ToList();
+            return _dbSet.AsNoTracking().ToList();
         }
 
         public IEnumerable<TEntity> Get(Func<TEntity, bool> predicate)
         {
-            return dbSet.AsNoTracking().Where(predicate).ToList();
+            return _dbSet.AsNoTracking().Where(predicate).ToList();
         }
 
         public IEnumerable<TEntity> GetWithInclude(params Expression<Func<TEntity, object>>[] includeProperties)
@@ -45,23 +45,32 @@ namespace ElectronicLibrary.DataAccessLayer.Infrastructure.Repositories
             return query.Where(predicate).ToList();
         }
 
+        public TEntity GetById(int id)
+        {
+            return _dbSet.Find(id);
+        }
+
         private IQueryable<TEntity> Include(params Expression<Func<TEntity, object>>[] includeProperties)
         {
-            IQueryable<TEntity> query = dbSet.AsNoTracking();
+            IQueryable<TEntity> query = _dbSet.AsNoTracking();
             return includeProperties
                 .Aggregate(query, (current, includeProperty) => current.Include(includeProperty));
         }
 
-        public void InsertOrUpdate(TEntity entity)
+        public void Add(TEntity entity)
         {
-            dbSet.Attach(entity);
+            if (entity == null)
+                return;
 
-            // These entities will also begin to be tracked by the context. If a reachable
-            // entity has its primary key value set then it will be tracked in the Modified state. 
-            // If the primary key value is not set then it will be tracked in the Added state. 
-            // An entity is considered to have its primary key value set if the primary key 
-            // property is set to anything other than the CLR default for the property type.
-            dbSet.Update(entity);
+            _dbSet.Add(entity);
+        }
+
+        public void Update(TEntity entity)
+        {
+            if(entity == null)
+                return;
+            _dbSet.Attach(entity);
+            _dbSet.Update(entity);
         }
     }
 }

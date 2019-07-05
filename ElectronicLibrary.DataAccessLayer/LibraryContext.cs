@@ -1,9 +1,11 @@
-﻿using System.Threading;
+﻿using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 using DAL.ModelConfiguration;
 using ElectronicLibrary.DataAccessLayer.Models;
 using ElectronicLibrary.DataAccessLayer.ModelConfiguration;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace ElectronicLibrary.DataAccessLayer
 {
@@ -21,7 +23,7 @@ namespace ElectronicLibrary.DataAccessLayer
         public LibraryContext(DbContextOptions<LibraryContext> options)
             : base(options)
         {
-           // Database.Migrate();
+            //Database.Migrate();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

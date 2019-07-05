@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace ElectronicLibrary.DataAccessLayer.Infrastructure.Interfaces
 {
@@ -11,8 +12,10 @@ namespace ElectronicLibrary.DataAccessLayer.Infrastructure.Interfaces
         IEnumerable<TEntity> GetWithInclude(params Expression<Func<TEntity, object>>[] includeProperties);
         IEnumerable<TEntity> GetWithInclude(Func<TEntity, bool> predicate,
             params Expression<Func<TEntity, object>>[] includeProperties);
-        void InsertOrUpdate(TEntity entity);
+        TEntity GetById(int id);
         void Delete(TEntity entity);
+        void Add(TEntity entity);
+        void Update(TEntity entity);
 
     }
 }
